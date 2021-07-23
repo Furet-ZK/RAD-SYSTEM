@@ -1,0 +1,43 @@
+#!/bin/sh
+#
+# Startup script for rmpoller
+#
+# chkconfig: 2345 99 92
+# description: Radius Manager daemon
+#
+
+### BEGIN INIT INFO
+# Provides:          rmpoller
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start rmpoller daemon at boot time
+# Description:       Enable service provided by rmpoller daemon.
+### END INIT INFO
+
+PROG=rmpoller
+BIN=/usr/local/bin/$PROG
+CFG=/etc/radiusmanager.cfg
+PIDFILE=/var/run/$PROG.pid
+DESC="$PROG"
+
+test -f $BIN || exit 0
+test -f $CFG || exit 0
+
+case "$1" in
+  start)
+	echo "Starting daemon: $DESC"
+	$BIN
+	;;
+  stop)
+	[ -z "$2" ] && echo -n "Stopping daemon: "
+        [ -f $PIDFILE ] && kill -TERM `cat $PIDFILE`
+	[ -z "$2" ] && echo $DESC
+	;;
+  *)
+        echo "Usage: /etc/init.d/$DESC {start|stop}"
+        exit 1
+esac
+
+exit 0

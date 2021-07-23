@@ -1,0 +1,68 @@
+apt-get install mc wget apache2 make gcc mysql-server mysql-client libmysqlclient15-dev libperl-dev curl php5 libapache2-mod-php5 php5-mysql php5-cli php5-curl php5-mcrypt php5-gd php5-snmp alpine mutt postfix dmidecode rrdtool fping snmp-mibs-downloader
+apt-get install libc6:i386 lsb-core
+
+wget http://www.dmasoftlab.com/download/freeradius-server-2.2.0-dma-patch-2.tar.gz
+
+tar xvf freeradius-server-2.2.0-dma-patch-2.tar.gz
+
+cd freeradius-server-2.2.0
+
+./configure
+
+make && make install
+
+ldconfig
+
+radiusd -X
+
+chown www-data /usr/local/etc/raddb
+chown www-data /usr/local/etc/raddb/clients.conf
+
+mysql -u root -p
+
+CREATE DATABASE radius;
+CREATE DATABASE conntrack;
+CREATE USER 'radius'@'localhost' IDENTIFIED BY 'radius123';
+CREATE USER 'conntrack'@'localhost' IDENTIFIED BY 'conn123';
+GRANT ALL ON radius.* TO radius@localhost;
+GRANT ALL ON conntrack.* TO conntrack@localhost;
+
+exit
+
+cp Rad/bin/rm* /usr/local/bin/
+chmod 775 /usr/local/bin/rm*
+
+
+cp Rad/rc.d/rm* /etc/init.d/
+chmod 775 /etc/init.d/rm*
+chown root.root /etc/init.d/rm*
+
+cp Rad/rc.d/radiusd /etc/init.d/
+chmod 775 /etc/init.d/radiusd
+
+update-rc.d rmpoller defaults 99
+update-rc.d rmconntrack defaults 99
+update-rc.d radiusd defaults 99
+
+cp Rad/etc/logrotate.d/radiusd /etc/logrotate.d/radiusd
+cp Rad/etc/cron.d/radiusmanager /etc/cron.d/radiusmanager
+chmod 644 /etc/cron.d/radiusmanager
+
+cp Rad/etc/radiusmanager.cfg /etc/
+chmod 755 /etc/radiusmanager.cfg
+
+sed -i 's/02\ 0\ \*\ \*\ \*\ root\ \/usr\/bin\/php/#2\ 0\ \*\ \*\ \*\ root\ \/usr\/bin\/php/g' /etc/crontab
+sed -i 's/var\/lib\/mysql\/mysql.sock/var\/run\/mysqld\/mysqld.sock/g' /etc/radiusmanager.cfg
+
+cp Rad/apache/* /etc/apache2/sites-available/
+
+mkdir /var/www/Rad
+cp Rad/www/rad/* /var/www/Rad/
+
+service apache2 restart
+
+service mysql restart
+
+service radiusd restart
+
+

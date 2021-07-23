@@ -1,0 +1,17 @@
+/usr/local/var/log/radius/radius.log {
+    missingok
+    create 0644
+    postrotate
+        /etc/init.d/radiusd stop > /dev/null
+        /etc/init.d/radiusd start > /dev/null
+    endscript
+}
+
+/usr/local/var/log/radius/radiusd_safe.log {
+    missingok
+    create 0644
+    postrotate
+        /etc/init.d/radiusd stop > /dev/null
+        /etc/init.d/radiusd start > /dev/null
+    endscript
+}

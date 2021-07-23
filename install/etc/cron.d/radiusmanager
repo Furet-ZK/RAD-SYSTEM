@@ -1,0 +1,8 @@
+# Radius Manager
+
+02 00 * * * root /usr/bin/php /var/www/html/radiusmanager/rmscheduler.php
+*  00 * * * root /usr/bin/php /var/www/html/radiusmanager/newuserscleanup.php > /dev/null 2>&1
+*/5 * * * * root /usr/bin/php /var/www/html/radiusmanager/cmtspoller.php > /dev/null 2>&1
+*/5 * * * * root /usr/bin/php /var/www/html/radiusmanager/wlanpoller.php > /dev/null 2>&1
+*/5 * * * * root /usr/bin/php /var/www/html/radiusmanager/phpsesscleanup.php > /dev/null 2>&1
+01 00 * * * root /bin/rm -f   /var/www/html/radiusmanager/tmpimages/*
