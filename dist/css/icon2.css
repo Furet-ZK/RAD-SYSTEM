@@ -1,0 +1,100 @@
+.small-box .icon2 {
+  color: rgba(0, 0, 0, 0.15);
+  z-index: 0;
+}
+.small-box .icon3 {
+  color: rgba(0, 0, 0, 0.15);
+  z-index: 0;
+}
+
+.small-box .icon2 > i {
+  font-size: 70px;
+  position: absolute;
+  left: 15px;
+  top: 40px;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.small-box:hover .icon2 > i, .small-box:hover .icon2 > i.fa, .small-box:hover .icon2 > i.fas, .small-box:hover .icon2 > i.far, .small-box:hover .icon2 > i.fab, .small-box:hover .icon2 > i.fal, .small-box:hover .icon2 > i.fad, .small-box:hover .icon2 > i.icon2 {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.small-box:hover .icon2 > svg {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.small-box .icon3 > i {
+  font-size: 70px;
+  position: absolute;
+  right: 15px;
+  top: 40px;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.small-box:hover .icon3 > i, .small-box:hover .icon3 > i.fa, .small-box:hover .icon3 > i.fas, .small-box:hover .icon3 > i.far, .small-box:hover .icon3 > i.fab, .small-box:hover .icon3 > i.fal, .small-box:hover .icon3 > i.fad, .small-box:hover .icon3 > i.icon3 {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.small-box:hover .icon3 > svg {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.info-box p {
+    font-size: 30px;
+  }
+
+select { 
+text-align: center; 
+}
+
+input { 
+text-align: center; 
+}
+
+select { 
+text-align-last:center; 
+}
+
+input { 
+text-align-last:center; 
+}
+
+@media (max-width: 768px) {
+.small-box .icon2 {
+    display: none;
+  }
+
+.small-box .icon3 {
+    display: none;
+  }
+.small-box h3 {
+    font-size: 20px;
+  }
+.small-box p {
+    font-size: 10px;
+  }
+.info-box span {
+    font-size: 10px;
+  }
+.info-box p {
+    font-size: 20px;
+  }
+.sidebar {
+    font-size: 10px;
+  }
+.btn {
+    font-size: 10px;
+  }
+tr .child { 
+text-align: center; 
+text-align-last:center; 
+}
+ }

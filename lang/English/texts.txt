@@ -1,0 +1,139 @@
+{AAAA1}]		List User
+{AAAA2}]		All Users
+{AAAA3}]		Find User
+{AAAA4}]		List Service
+{AAAA5}]		Clock
+{AAAA6}]		Expire Users
+{AAAA7}]		Traffic Report
+{AAAA8}]		Traffic summary
+{AAAA9}]		New AP
+{AAAA10}]	Wifi AP
+{AAAA11}]	List Nas
+{AAAA12}]	Ping on Google
+{AAAA13}]	Europe Server
+{AAAA14}]	Main Users
+{AAAA15}]	Online Users
+{AAAA16}]	Active Users
+{AAAA17}]	Balance
+{AAAA18}]	Expire users after 3 Days
+{AAAA19}]	Expire Today
+{AAAA20}]	System Information
+{AAAA21}]	Cards Statics
+{AAAA22}]	Refill card cards statistics
+{MENU9191}]	Online users
+{Test_Balance1}]	Test Balance
+{Test_add}]	ADD Balance
+{Test_add1}]	ADD Tests
+{AAAA23}]	Test
+{AAAA24}]	New Users
+{AAAA25}]	Manager Name
+{AAAA26}]	Version
+{AAAA27}]	Dhcp Status
+{AAAA28}]	Radius Status
+{AAAA29}]	Users
+{AAAA30}]	New
+{AAAA31}]	Balance
+{AAAA32}]	IP Settings
+{AAAA33}]	Services
+{AAAA34}]	Log
+{AAAA35}]	Logout
+{AAAA36}]	Home
+{AAAA37}]	Expire Users
+{AAAA38}]	User
+{AAAA39}]	Manager
+{AAAA40}]	All Balance
+{AAAA41}]	Insert Balance
+{AAAA42}]	Username
+{AAAA43}]	Status
+{AAAA44}]	Rename
+{AAAA45}]	Full Name
+{AAAA46}]	Activate
+{AAAA47}]	Expiration
+{AAAA48}]	Disconnect
+{AAAA49}]	Static Ip
+{AAAA50}]	Profile
+{AAAA51}]	OnTime
+{AAAA52}]	MacAddress
+{AAAA53}]	Signal
+{AAAA54}]	CCQ
+{AAAA55}]	Ap ip
+{AAAA56}]	Service
+{AAAA57}]	Trial Active
+{AAAA58}]	Online
+{AAAA59}]	Offline
+{AAAA60}]	First Name
+{AAAA61}]	Last Name
+{AAAA62}]	Expire Users After 3 Days
+{AAAA63}]	Expire Today
+{AAAA64}]	Active
+{AAAA65}]	Expire
+{AAAA66}]	Change Profile
+{AAAA67}]	Password
+{AAAA68}]	Show Password
+{AAAA69}]	Wifi
+{AAAA70}]	List Wifi AP
+{AAAA71}]	New Wifi AP
+{AAAA72}]	Manager
+{AAAA73}]	Activity
+{AAAA74}]	Date
+{AAAA75}]	Price
+{AAAA76}]	Profile
+{AAAA77}]	Trial Balance
+{AAAA78}]	NAS
+{AAAA79}]	Radiusd Restart
+{AAAA80}]	ConnectionTrack
+{AAAA81}]	Expire Users
+{AAAA82}]	Managers
+{AAAA83}]	Your Balance
+{AAAA84}]	Your balance isn't enough
+{AAAA85}]	Password
+{AAAA86}]	Discount
+{AAAA87}]	Yes
+{AAAA88}]	No
+{AAAA89}]	Pool
+{AAAA90}]	Price Without Discount
+{AAAA91}]	Price with Discount
+{AAAA92}]	Enabled
+{AAAA93}]	Disabled
+{AAAA94}]	Ip Mode
+{AAAA95}]	Static
+{AAAA96}]	Changeable
+{AAAA97}]	Address
+{AAAA98}]	Phone
+{AAAA99}]	MacAddress Mode
+{AAAA100}]	Account Service
+{AAAA101}]	if the static ip is changeable please be blank
+{AAAA102}]	ADD this UserName
+{AAAA103}]	This Username isn't available
+{AAAA104}]	This Username was add successfully
+{AAAA105}]	ADD this Manager
+{AAAA106}]	This Manager was add successfully
+{AAAA107}]	Service Name 
+{AAAA108}]	Pool Name 
+{AAAA109}]	Expire Days
+{AAAA110}]	Price
+{AAAA111}]	Discount
+{AAAA112}]	Ignore Static Ip
+{AAAA113}]	DownRate
+{AAAA114}]	UpRate
+{AAAA115}]	Limit Download
+{AAAA116}]	Limit Upload
+{AAAA117}]	Download Burst Limit
+{AAAA118}]	Upload Burst Limit
+{AAAA119}]	Download Burst Threshold
+{AAAA120}]	Upload Burst Threshold
+{AAAA121}]	Download Burst Time
+{AAAA122}]	Upload Burst Time
+{AAAA123}]	Priority
+{AAAA124}]	Next Expired Service
+{AAAA125}]	Download Quota Per Day
+{AAAA126}]	Upload Quota Per Day
+{AAAA127}]	Total Quota Per Day
+{AAAA128}]	Time Quota Per Day
+{AAAA129}]	Enable Burst
+{AAAA130}]	Enable Quota
+{AAAA131}]	Services
+{AAAA132}]	Service ADD
+{AAAA133}]	The Service ADD Successfully
+{AAAA134}]	Options
+{AAAA135}]	System Settings

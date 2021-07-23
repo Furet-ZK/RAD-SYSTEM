@@ -1,0 +1,30 @@
+@media (min-width:320px)  {   /* For desktop: */
+  .btn-app {width: 100%;}
+ }
+@media (min-width:481px)  {   /* For desktop: */
+  .btn-app {width: 100%;}
+}
+@media (min-width:641px)  {   /* For desktop: */
+  .btn-app {width: 100%;}
+ }
+@media (min-width:961px)  {   /* For desktop: */
+  .btn-app {width: 100%;}
+ }
+@media (min-width:1025px) {  /* For desktop: */
+  .btn-app {width: 100%;}
+}
+@media (min-width:1281px) {   /* For desktop: */
+  .btn-app {width: 14%;}
+ }
+body {
+  font-family: "Times New Roman", serif;
+  font-style: italic;
+color: #151b1e;
+}
+
+td {
+  font-family: "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+}

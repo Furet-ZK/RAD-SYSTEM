@@ -1,0 +1,16 @@
+Options -Indexes
+DirectoryIndex index.php
+AddDefaultCharset UTF-8
+
+
+#RewriteEngine On
+
+#RewriteRule admin admin.php
+
+#RewriteRule user user.php
+
+#RewriteRule reg reg.php
+
+#RewriteRule buyias buyias.php
+
+
