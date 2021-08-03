@@ -51,7 +51,7 @@ echo '</select>
 		<?php if ($update == true): ?>
 		<br><center><button class="btn" type="submit" name="update" style="background: orange;" ><h3 >Change</h3></button></center>
 		<?php endif ?>
-	</div><br><center><a class="btn btn-block btn-dark"><h4>عند تغير نوع الاشتراك سيتغير تاريخ انتهاء الاشتراك الى الوقت الحالي ويعني انتهاء المشترك</h4></a></center></table>';
+	</div><br><center><a class="btn btn-block btn-dark"><h4>عند تغير نوع الاشتراك سيتغير تاريخ انتهاء الاشتراك الى الوقت الحالي ويعني انتهاء المشترك</h4></a></center></table></div></div></div></div></div></div>';
 
 	if (isset($_POST['update'])) {
 		$name = $_POST['name'];

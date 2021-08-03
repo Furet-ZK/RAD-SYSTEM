@@ -17,7 +17,7 @@ echo '<div class"card">
 <div class="col-sm-12 col-md-12 lobipanel-parent-sortable ui-sortable">
 <div class="card card-bd lobidrag lobipanel lobipanel-sortable">
 <div class="card-body">
-<form method="post" action="" >
+<form method="post" action="" id="q">
 <table class="table" border="15">
 <td><center><h3><div class="form-row"><div class="form-group col-md-12">
 		<center><label><center><a>IP Address</a></center></label></center>
@@ -47,7 +47,7 @@ echo '<div class"card">
 		<?php if ($update == true): ?>
 		<center><button class="btn bg-gradient-warning" type="submit" name="update"><h3 style="font-size: 24px;">Change</h3></button></center>
 		<?php endif ?>
-	</div></table></div>';
+	</div></table></div></div></div></div>';
 
 	if (isset($_POST['update'])) {
 		$address = $_POST['address'];
@@ -110,7 +110,7 @@ echo '<div class"card">
 	</div>
 <div class="form-group col-md-6">
 		<button class="btn bg-gradient-primary btn-block" type="submit" name="reboot"><h3>Reboot</h3></button>
-	</div></table></div>';
+	</div></table></div></div></div></div></div></div>';
 
 	if (isset($_POST['shutdown'])) {
 shell_exec("sudo /sbin/shutdown -h now");}
@@ -122,3 +122,59 @@ shell_exec("sudo /sbin/shutdown -r now");}
 
 
 ?>
+<script>
+$(function () {
+  $('#q').validate({
+    rules: {
+      address: {
+        required: true,
+        minlength: 1
+      },
+      netmask: {
+        required: true,
+        minlength: 1
+      },
+      network: {
+        required: true,
+        minlength: 1
+      },
+      broadcast: {
+        required: true,
+        minlength: 1
+      },
+      gateway: {
+        required: true,
+        minlength: 1
+      },
+    },
+    messages: {
+      address: {
+        required: "Please ADD the ADDRESS",
+      },
+      network: {
+        required: "Please ADD the Network",
+      },
+      netmask: {
+        required: "Please ADD the Netmask",
+      },
+      broadcast: {
+        required: "Please ADD the Broadcast",
+      },
+      gateway: {
+        required: "Please ADD the Gateway",
+      },
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
+});
+</script>

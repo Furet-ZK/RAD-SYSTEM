@@ -23,7 +23,7 @@ echo '<div class"card">
 <thead><tr> 
         <td> <font face="Arial"><center><h3>{AAAA82}</h3></center></font> </td>
         <td> <font face="Arial"><center><h3>{AAAA60}</h3></center></font> </td>
-      </tr></thead></table></center>';
+      </tr></thead></table></center></div></div></div></div></div></div>';
 }}
 ?>
 

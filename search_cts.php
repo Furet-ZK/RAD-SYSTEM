@@ -40,6 +40,6 @@ echo '<option value="' . $row['date'] . '">' . $row['date'] . '</option>';}
 echo '</select></div>
 <div class="form-group col-md-12">
 		<center><button class="btn bg-gradient-warning" type="submit" name="update"><h3 style="font-size: 24px;">Change</h3></button></center>
-	</div></table></div>';
+	</div></table></div></div></div></div></div></div>';
 }
 ?>

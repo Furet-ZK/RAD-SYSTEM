@@ -35,7 +35,7 @@ echo '<div class"card">
 		<?php if ($update == true): ?>
 		<br><center><button class="btn" type="submit" name="update" style="background: orange;" ><h3 style="font-size: 24px;">Change</h3></button></center>
 		<?php endif ?>
-	</div>';
+	</div></table></div></div></div></div></div></div>';
 	if (isset($_POST['update'])) {
 		$name = $_POST['name'];
 		$rename = $_POST['rename'];

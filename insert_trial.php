@@ -22,7 +22,7 @@ echo '<div class"card">
 <div class="card card-bd lobidrag lobipanel lobipanel-sortable">
 <div class="card-body"><div style="overflow-x:auto;">
 <table class="table" border="15">
-<td><center><form method="post" action="" ><center><label><h3><center>{AAAA72}</center></label></center>
+<td><center><form method="post" action="" id="q"><center><label><h3><center>{AAAA72}</center></label></center>
 <select style="text-align:center;" class="form-control mr-sm-2" type="search" placeholder="managername" aria-label="Owner" name="managername">';
 $query = mysqli_query($link, "select * from rm_managers where managername != 'admin' ");
      while($row1 = mysqli_fetch_array($query)){
@@ -39,7 +39,7 @@ echo '</select>
 		<?php if ($update == true): ?>
 		<br><center><button class="btn bg-danger" type="submit" name="update"><h3>ADD</h3></button></center>
 		<?php endif ?>
-	</div></table>';
+	</div></table></div></div></div></div></div></div>';
 
 	if (isset($_POST['update'])) {
 		$name = $_POST['name'];
@@ -73,7 +73,7 @@ echo '<div class"card">
 <div class="card card-bd lobidrag lobipanel lobipanel-sortable">
 <div class="card-body"><div style="overflow-x:auto;">
 <table class="table" border="15">
-<td><center><form method="post" action="" ><center><label><center>{AAAA72}</center></label></center>
+<td><center><form method="post" action="" id="q"><center><label><center>{AAAA72}</center></label></center>
 <select style="text-align:center;" class="form-control mr-sm-2" type="search" placeholder="managername" aria-label="Owner" name="managername">';
 $query = mysqli_query($link, "select * from rm_managers where managername != 'admin' ");
      while($row1 = mysqli_fetch_array($query)){
@@ -90,7 +90,7 @@ echo '</select>
 		<?php if ($update == true): ?>
 		<br><center><button class="btn bg-dark" type="submit" name="update" ><h3>ADD</h3></button></center>
 		<?php endif ?>
-	</div>';
+	</div></table></div></div></div></div></div></div>';
 
 	if (isset($_POST['update'])) {
 		$name = $_POST['name'];
@@ -119,3 +119,31 @@ echo "</tr>";
 }
 }
 ?>
+<script>
+$(function () {
+  $('#q').validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 1
+      },
+    },
+    messages: {
+      name: {
+        required: "Please ADD a Balance",
+      },
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
+});
+</script>

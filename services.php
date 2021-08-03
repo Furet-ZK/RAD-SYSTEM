@@ -20,7 +20,7 @@ echo '<div class"card">
         <td> <font face="Arial"><center><h3>{AAAA76}</h3></center></font> </td>
         <td> <font face="Arial"><center><h3>{AAAA75}</h3></center></font> </td>
       </tr></thead></div>';
-echo '</table></center></div>';
+echo '</table></center></div></div></div></div></div></div>';
 }
 ?>
 <script>

@@ -40,7 +40,7 @@ echo '<div class"card">
 	</div>
 <div class="form-group col-md-6">
 		<button class="btn bg-gradient-primary btn-block" type="submit" name="delip" ><h3>Remove all Static IP and Reorder for All users</h3></button>
-	</div></table>';
+	</div></table></div></div></div></div></div></div>';
 
 	if (isset($_POST['dau'])) {
 		$res = mysqli_query($link, "Delete from `rm_users` ");

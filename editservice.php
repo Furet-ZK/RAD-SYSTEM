@@ -48,7 +48,7 @@ echo '<div class"card">
 		<?php if ($update == true): ?>
 		<center><button class="btn bg-gradient-warning" type="submit" name="update"><h3 style="font-size: 24px;">Change</h3></button></center>
 		<?php endif ?>
-	</div></div></table>';
+	</div></div></table></div></div></div></div></div>';
 }
 	if (isset($_POST['update'])) {
 		$srvname = $_POST['srvname'];

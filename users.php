@@ -21,7 +21,7 @@ echo '<div class"card">
           <th><font face="Arial"><center><a>{AAAA50}</a></center></font> </th>
           <th><font face="Arial"><center><a>{AAAA136}</a></center></font> </th>
           <th><font face="Arial"><center><a>{AAAA46}</a></center></font></th>
-      </tr></thead></table></center>';
+      </tr></thead></table></center></div></div></div></div></div>';
 
 break;
 
@@ -42,7 +42,7 @@ echo '<div class"card">
           <th><font face="Arial"><center><a>{AAAA50}</a></center></font> </th>
           <th><font face="Arial"><center><a>{AAAA46}</a></center></font></th>
       </tr></thead>';
-echo '</table></center>';
+echo '</table></center></div></div></div></div></div>';
 break;
 
 case '1':
@@ -62,7 +62,7 @@ echo '<div class"card">
           <th><font face="Arial"><center><a>{AAAA50}</a></center></font> </th>
           <th><font face="Arial"><center><a>{AAAA46}</a></center></font></th>
       </tr></thead>';
-echo '</table></center>';
+echo '</table></center></div></div></div></div></div>';
 
 break;
 
@@ -83,7 +83,7 @@ echo '<div class"card">
           <th><font face="Arial"><center><a>{AAAA50}</a></center></font> </th>
           <th><font face="Arial"><center><a>{AAAA46}</a></center></font></th>
       </tr></thead>';
-echo '</table></center>';
+echo '</table></center></div></div></div></div></div>';
 
 break;
 
@@ -104,7 +104,7 @@ echo '<div class"card">
           <th><font face="Arial"><center><a>{AAAA50}</a></center></font> </th>
           <th><font face="Arial"><center><a>{AAAA46}</a></center></font></th>
       </tr></thead>';
-echo '</table></center>';
+echo '</table></center></div></div></div></div></div>';
 
 break;
 
@@ -129,7 +129,7 @@ echo '<div class"card">
           <th><font face="Arial"><center><a>{AAAA54}</a></center></font> </th>
           <th><font face="Arial"><center><a>{AAAA55}</a></center></font> </th>
       </tr></thead>';
-echo '</table></center>';
+echo '</table></center></div></div></div></div></div>';
 
 break;
 
@@ -235,7 +235,8 @@ if(aData[3] >= aa){
 &nbsp;<a class="btn btn-app bg-gradient-primary" title="Trial Active" href=index.php?cont=trial_user&name='+ aData[0] +'><i class="fas fa-credit-card"></i>{AAAA57}</a> \
 &nbsp;<a class="btn btn-app bg-gradient-warning" title="Update Username" href="index.php?cont=update_user&name='+ aData[0] +'"><i class="fas fa-users"></i>{AAAA44}</a> \
 &nbsp;<a class="btn btn-app bg-gradient-gray" title="Update Profile" href="index.php?cont=update_profile&name='+ aData[0] +'"><i class="fas fa-users"></i>{AAAA66}</a> \
-&nbsp;<a class="btn btn-app bg-gradient-success"><i class="fas fa-user-shield"></i>{AAAA64}</a></center>');}
+&nbsp;<a class="btn btn-app bg-gradient-success"><i class="fas fa-user-shield"></i>{AAAA64}</a> \
+&nbsp;<a>'+ aData[9] +'</a></center>');}
 else {
         $('td:eq(6)', nRow).html( '<center><a class="btn btn-app bg-gradient-info" title="Active Users" href=index.php?cont=active_user&name='+ aData[0] +'><i class="fas fa-edit"></i>{AAAA46}</a> \
 &nbsp;<a class="btn btn-app bg-gradient-primary" title="Trial Active" href=index.php?cont=trial_user&name='+ aData[0] +'><i class="fas fa-credit-card"></i>{AAAA57}</a> \

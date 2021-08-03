@@ -68,11 +68,15 @@ echo "<script>window.location = 'index.php?cont=list_users';</script>";}
 		$res = mysqli_query($link, "INSERT INTO `ip`(`srvid`, `staticip`) VALUES ('$srvid', '$ip')");
 		$res = mysqli_query($link, "INSERT INTO `logs`(`name`, `log`, `time`) VALUES ('" . $_SESSION['AUTH_MANAGER'] . "', N'اضافة الايبي ($ip) ' ,localtime())");}
 
-echo '</table></div>';
+echo '</table></div></div></div></div></div>';
 
        $query = mysqli_query($link, "SELECT * FROM ip LEFT JOIN rm_services ON ip.srvid = rm_services.srvid");
 
-echo '<div style="overflow-x:auto;">
+echo '<div class"card">
+<div class="row">
+<div class="col-sm-12 col-md-12 lobipanel-parent-sortable ui-sortable">
+<div class="card card-bd lobidrag lobipanel lobipanel-sortable">
+<div class="card-body"><div style="overflow-x:auto;">
 <table class="table" border="15">
 <tr> 
         <td> <font face="Arial"><center><h3>الاشتراك</h3></center></font> </td>
@@ -84,13 +88,10 @@ echo '<div style="overflow-x:auto;">
             echo '<td><center><h3><a class="btn bg-gradient-danger btn-lg btn-block" ><h3 style="font-size: 24px;"> ' . $row['staticip'] . '</h3></a></h3></center></td>';
             echo "</tr>";}
 
-echo '</table></div>';
+echo '</table></div></div></div></div></div></div>';
 }
 }
 ?>
-
-
-
 
 
 

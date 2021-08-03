@@ -19,7 +19,7 @@ echo '<div class"card">
 <div class="card-body">
 <!-----------<div style="overflow-x:auto;">/--------->
 <table class="table" border="15"><td>
-<center><form method="post" action="">
+<center><form method="post" action="" id="q">
 <div class="form-row">
     <div class="form-group col-md-6">
       <label for="username">{AAAA25}</label>
@@ -56,7 +56,7 @@ echo '<div class"card">
 		<?php if ($update == true): ?>
 		<br><button class="btn bg-gradient-dark" type="submit" name="update" ><h3 style="font-size: 24px;">{AAAA105}</h3></button></center>
 		<?php endif ?>
-	</div>';
+	</div></table></div></div></div></div></div>';
 	if (isset($_POST['update'])) {
 		$username = $_POST['username'];
 		$password = $_POST['password'];
@@ -155,3 +155,39 @@ echo "<script>window.location = 'index.php';</script>";
 }}}}
 echo '</table></div>';}
 ?>
+<script>
+$(function () {
+  $('#q').validate({
+    rules: {
+      username: {
+        required: true,
+        minlength: 1
+      },
+      password: {
+        required: true,
+        minlength: 1
+      },
+    },
+    messages: {
+      username: {
+        required: "{AAAA139}",
+      },
+      password: {
+        required: "{AAAA138}",
+        minlength: "Your password must be at least 1 characters long"
+      },
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
+});
+</script>

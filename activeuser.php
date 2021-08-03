@@ -18,7 +18,7 @@ echo '<div class"card">
 <div class="card card-bd lobidrag lobipanel lobipanel-sortable">
 <div class="card-body"><div style="overflow-x:auto;">
 <table class="table" border="15">
-<td><center><h3><form method="post" action="" >';
+<td><center><h3><form method="post" action="" id="q">';
 $query1 = mysqli_query($link, "SELECT * FROM rm_managers WHERE managername = '" . $_SESSION['AUTH_MANAGER'] . "' ");
        while($row = mysqli_fetch_array($query1)){
             echo '<center><h3><a class="btn bg-gradient-danger btn-lg btn-block" ><h3 style="font-size: 24px;">{AAAA83} ' . $row['balance'] . '</h3></a></h3></center><br>';}
@@ -139,5 +139,33 @@ $query = mysqli_query($link, "SELECT * FROM rm_services left join rm_users on rm
        while($row = mysqli_fetch_array($query)){
             echo '<br><center><h3><a class="btn bg-gradient-info btn-lg btn-block" ><h3 style="font-size: 24px;">{AAAA75} ' . $row['unitprice'] . '</h3></a></h3></center>';
 }}}
-echo '</table></div>';}
+echo '</table></div></div></div></div></div></div>';}
 ?>
+<script>
+$(function () {
+  $('#q').validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 1
+      },
+    },
+    messages: {
+      name: {
+        required: "Please ADD the Username",
+      },
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
+});
+</script>

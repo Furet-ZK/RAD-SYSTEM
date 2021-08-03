@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
-<body class="hold-transition layout-fixed layout-footer-fixed sidebar-collapse sidebar-mini">
+<body class="hold-transition layout-fixed sidebar-collapse sidebar-mini">
 
 <?php 
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
@@ -374,6 +374,8 @@ echo $cd;
 <script src="plugins/summernote/summernote-bs4.min.js"></script>
 <!-- overlayScrollbars -->
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="plugins/jquery-validation/additional-methods.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
 </body>

@@ -83,5 +83,5 @@ $query = mysqli_query($link, "SELECT * FROM rm_managers where `managername` = '"
 
             echo '<br><center><h3><a class="btn bg-gradient-green btn-lg btn-block" ><h3 style="font-size: 24px;">' . $row['testbalance'] . ' {AAAA23}</h3></a></h3></center>';
 }
-echo '</table></div>';}
+echo '</table></div></div></div></div></div></div>';}
 ?>

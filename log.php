@@ -29,7 +29,7 @@ echo '<div class"card">
         <td> <font face="Arial"><center>{AAAA74}</center></font> </td>
           <td><font face="Arial"><center>{AAAA75}</center></font> </td>
       </tr></thead></div>';
-echo '</table></center>';
+echo '</table></center></div></div></div></div></div></div>';
 
 }
 ?>

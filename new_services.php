@@ -19,7 +19,7 @@ echo '<div class"card">
 <div class="card-body">
 <!-----------<div style="overflow-x:auto;">/--------->
 <table class="table" border="15"><td>
-<center><form method="post" action="">
+<center><form method="post" action="" id="q">
 <div class="form-row">
     <div class="form-group col-md-6">
       <label for="username">{AAAA107}</label>
@@ -135,7 +135,7 @@ echo '</select>
 		<?php if ($update == true): ?>
 		<br><button class="btn bg-gradient-dark" type="submit" name="update" ><h3 style="font-size: 24px;">{AAAA132}</h3></button></center>
 		<?php endif ?>
-	</div>';
+	</div></table></div></div></div></div></div>';
 	if (isset($_POST['update'])) {
 		$srvname = $_POST['srvname'];
 		$pool = $_POST['pool'];
@@ -183,3 +183,55 @@ echo "<script>window.location = 'index.php';</script>";
 }}}}
 echo '</table></div>';}
 ?>
+<script>
+$(function () {
+  $('#q').validate({
+    rules: {
+      srvname: {
+        required: true,
+        minlength: 1
+      },
+      pool: {
+        required: true,
+        minlength: 1
+      },
+      price: {
+        required: true,
+        minlength: 1
+      },
+      disco: {
+        required: true,
+        minlength: 1
+      },
+    },
+    messages: {
+      srvname: {
+        required: "Please ADD a Service Name",
+      },
+      pool: {
+        required: "Please ADD a Pool Name",
+        minlength: "Your pool must be at least 1 characters long"
+      },
+      price: {
+        required: "Please ADD a Subscripe Price",
+        minlength: "Your pool must be at least 1 characters long"
+      },
+      disco: {
+        required: "Please ADD a Subscripe Discount Price",
+        minlength: "Your pool must be at least 1 characters long"
+      },
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
+});
+</script>

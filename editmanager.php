@@ -71,7 +71,7 @@ echo      '</select>
 		<?php if ($update == true): ?>
 		<center><button class="btn bg-gradient-green" type="submit" name="delete" ><h3>Delete Manager</h3></button></center>
 		<?php endif ?>
-	</div></div></table>';
+	</div></div></table></div></div></div></div></div>';
 }
 	if (isset($_POST['update'])) {
 		$managername = $_POST['managername'];

@@ -29,7 +29,7 @@ echo '<div class"card">
           <td><font face="Arial"><center>{AAAA31}</center></font> </td>
           <td><font face="Arial"><center>{AAAA77}</center></font> </td>
 
-      </tr></thead></div></table></center>';
+      </tr></thead></div></table></center></div></div></div></div></div></div>';
 }
 	if ($_SESSION['AUTH_MANAGER'] != 'admin') {
 echo "<tr>";

@@ -19,7 +19,7 @@ echo '<div class"card">
 <div class="col-sm-12 col-md-12 lobipanel-parent-sortable ui-sortable">
 <div class="card card-bd lobidrag lobipanel lobipanel-sortable">
 <div class="card-body">
-<form method="post" action="" >
+<form method="post" action="" id="q">
 <table class="table" border="15">
 <td><center><h3><div class="form-row"><div class="form-group col-md-12">
 		<center><label><center><a>Nas Name</a></center></label></center>
@@ -45,7 +45,7 @@ echo '<div class"card">
 		<?php if ($update == true): ?>
 		<center><button class="btn bg-gradient-warning" type="submit" name="update"><h3 style="font-size: 24px;">Change</h3></button></center>
 		<?php endif ?>
-	</div>';
+	</div></table></div></div></div></div>';
 
 	if (isset($_POST['update'])) {
 		$ip = $_POST['ip'];
@@ -78,3 +78,45 @@ echo "<script>window.location = 'index.php?cont=list_users';</script>";
 }}}
 echo '</table></div>';}
 ?>
+<script>
+$(function () {
+  $('#q').validate({
+    rules: {
+      ip: {
+        required: true,
+        minlength: 1
+      },
+      name: {
+        required: true,
+        minlength: 1
+      },
+      secret: {
+        required: true,
+        minlength: 1
+      },
+    },
+    messages: {
+      ip: {
+        required: "Please ADD the IP",
+      },
+      name: {
+        required: "Please ADD the Name",
+      },
+      secret: {
+        required: "Please ADD the Secret",
+      },
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
+});
+</script>
