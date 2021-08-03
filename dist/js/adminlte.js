@@ -1304,7 +1304,7 @@
         return;
       }
 
-      var uniqueName = link.replace('./', '').replace(/["&'./:=?[\]]/gi, '-').replace(/(--)/gi, '');
+      var uniqueName = link.replace('./', '').replace(/["#&'./:=?[\]]/gi, '-').replace(/(--)/gi, '');
       var navId = "tab-" + uniqueName;
 
       if (!this._config.allowDuplicates && $__default['default']("#" + navId).length > 0) {

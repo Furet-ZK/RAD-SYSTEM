@@ -1,3 +1,6 @@
+<html>
+<body>
+
 <?php 
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 header('Cache-Control: no-store, no-cache, must-revalidate');
@@ -15,63 +18,37 @@ echo '<center><nav class="mt-3">
   </form>
 </nav></center><br>';
 
-if ($_SESSION['AUTH_MANAGER'] == 'admin') 
-{
-        $query = mysqli_query($link, "SELECT * FROM logs order by time desc");
-
 echo '<div class"card">
 <div class="col-sm-12 col-md-12 lobipanel-parent-sortable ui-sortable">
 <div class="card card-bd lobidrag lobipanel lobipanel-sortable">
 <div class="card-body"><div style="overflow-x:auto;"><div class="card-body">
-<table class="table table-bordered table-hover table-striped" id="example3">
+<center><table class="table table-bordered table-hover table-striped" id="example4">
 <div class="box box-solid box-default"><thead><tr> 
         <td> <font face="Arial"><center>{AAAA72}</center></font> </td>
         <td> <font face="Arial"><center>{AAAA73}</center></font> </td>
         <td> <font face="Arial"><center>{AAAA74}</center></font> </td>
           <td><font face="Arial"><center>{AAAA75}</center></font> </td>
       </tr></thead></div>';
+echo '</table></center>';
 
-       while($row = mysqli_fetch_array($query)){
-
-            echo "<tr>";
-            echo '<td><center><strong>' . $row['name'] . '</strong></center></td>';
-            echo '<td><center><strong>' . $row['log'] . '</strong></center></td>';
-            echo '<td><center><strong>' . $row['time'] . '</strong></center></td>';
-            echo '<td><center><strong>' . $row['price'] . '</strong></center></td>';
-            echo "</tr>";
-        }
-echo '</table>';
-}
-if ($_SESSION['AUTH_MANAGER'] != 'admin') 
-{
-switch ($_REQUEST['val']) {
-
-case '':
-
-        $query = mysqli_query($link, "SELECT * FROM logs where name = '" . $_SESSION['AUTH_MANAGER'] . "' order by time desc");
-
-echo '<div class"card">
-<div class="col-sm-12 col-md-12 lobipanel-parent-sortable ui-sortable">
-<div class="card card-bd lobidrag lobipanel lobipanel-sortable">
-<div class="card-body"><div style="overflow-x:auto;"><div class="card-body">
-<table class="table table-bordered table-hover table-striped" id="example3">
-<div class="box box-solid box-default"><thead><tr> 
-        <td> <font face="Arial"><center>{AAAA72}</center></font> </td>
-        <td> <font face="Arial"><center>{AAAA73}</center></font> </td>
-        <td> <font face="Arial"><center>{AAAA74}</center></font> </td>
-          <td><font face="Arial"><center>{AAAA75}</center></font> </td>
-      </tr></thead></div>';
-
-       while($row = mysqli_fetch_array($query)){
-
-            echo "<tr>";
-            echo '<td><center><strong>' . $row['name'] . '</strong></center></td>';
-            echo '<td><center><strong>' . $row['log'] . '</strong></center></td>';
-            echo '<td><center><strong>' . $row['time'] . '</strong></center></td>';
-            echo '<td><center><strong>' . $row['price'] . '</strong></center></td>';
-            echo "</tr>";
-        }
-echo '</table>';
-}}
 }
 ?>
+
+<script>
+$(document).ready(function() {
+    $('#example4').DataTable( {
+        "processing": true,
+        "serverSide": true,
+         "order": [[2,'desc']],
+    "fnRowCallback": function( nRow, aData, iDisplayIndex, iDisplayIndexFull ) {
+        $('td:eq(0)', nRow).html( '<a><center><strong>'+ aData[0] +'</strong></center>' );
+        $('td:eq(1)', nRow).html( '<a><center><strong>'+ aData[1] +'</strong></center></a>' );
+        $('td:eq(2)', nRow).html( '<a><center><strong>'+ aData[2] +'</strong></center></a>' );
+        $('td:eq(3)', nRow).html( '<a><center><strong>'+ aData[3] +'</strong></center></a>' );
+    },
+        "ajax": "classes/logs.php"
+    } );
+} );
+</script>
+</body>
+</html>

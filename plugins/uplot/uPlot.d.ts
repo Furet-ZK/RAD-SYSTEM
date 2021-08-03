@@ -126,7 +126,8 @@ declare class uPlot {
 	static assign(targ: object, ...srcs: object[]): object;
 
 	/** re-ranges a given min/max by a multiple of the range's magnitude (used internally to expand/snap/pad numeric y scales) */
-	static rangeNum: ((min: number, max: number, mult: number, extra: boolean) => uPlot.Range.MinMax) | ((min: number, max: number, cfg: uPlot.Range.Config) => uPlot.Range.MinMax);
+	static rangeNum(min: number, max: number, mult: number, extra: boolean): uPlot.Range.MinMax;
+	static rangeNum(min: number, max: number, cfg: uPlot.Range.Config): uPlot.Range.MinMax;
 
 	/** re-ranges a given min/max outwards to nearest 10% of given min/max's magnitudes, unless fullMags = true */
 	static rangeLog(min: number, max: number, base: uPlot.Scale.LogBase, fullMags: boolean): uPlot.Range.MinMax;
@@ -151,10 +152,10 @@ declare class uPlot {
 	static clipGaps: uPlot.Series.ClipPathBuilder;
 
 	/** helper function for grabbing proper drawing orientation vars and fns for a plot instance (all dims in canvas pixels) */
-	static orient: (u: uPlot, seriesIdx: number, callback: uPlot.OrientCallback) => any;
+	static orient(u: uPlot, seriesIdx: number, callback: uPlot.OrientCallback): any;
 
 	/** returns a pub/sub instance shared by all plots usng the provided key */
-	static sync: (key: string) => uPlot.SyncPubSub;
+	static sync(key: string): uPlot.SyncPubSub;
 }
 
 export = uPlot;
@@ -624,15 +625,54 @@ declare namespace uPlot {
 			ascDesc?: boolean; // false
 		}
 
+		export const enum BarsPathBuilderFacetUnit {
+			ScaleValue   = 1,
+			PixelPercent = 2,
+		//	HexColor     = 3,
+		}
+
+		export const enum BarsPathBuilderFacetKind {
+			Unary      = 1,
+			Discrete   = 2,
+			Continuous = 3,
+		}
+
+		export type BarsPathBuilderFacetValue = string | number | boolean | null | undefined;
+
+		export interface BarsPathBuilderFacet {
+			/** unit of measure for output of values() */
+			unit: BarsPathBuilderFacetUnit;
+			/** are the values unary, discrete, or continuous */
+			kind?: BarsPathBuilderFacetKind;
+			/** values to use for this facet */
+			values: (self: uPlot, seriesIdx: number, idx0: number, idx1: number) => BarsPathBuilderFacetValue[];
+		}
+
+		/** custom per-datapoint styling and positioning */
+		export interface BarsPathBuilderDisplay {
+			x0: BarsPathBuilderFacet;
+		//	x1: BarsPathBuilderFacet;
+			size: BarsPathBuilderFacet;
+		//	fill:
+		//	stroke:
+		}
+
 		export interface BarsPathBuilderOpts {
 			align?: -1 | 0 | 1; // 0
 
-			size?: [factor?: number, max?: number];
+			size?: [factor?: number, max?: number, min?: number];
 
 			// fixed-size gap between bars in CSS pixels (reduces bar width)
 			gap?: number;
+
+			/** should return a custom [cached] layout for bars in % of plotting area (0..1) */
+			disp?: BarsPathBuilderDisplay;
+
+			/** called with bbox geometry of each drawn bar in canvas pixels. useful for spatial index, etc. */
+			each?: (self: uPlot, seriesIdx: number, idx: number, left: number, top: number, width: number, height: number) => void;
 		}
 
+		export type PointsPathBuilderFactory  = () => Series.PathBuilder;
 		export type LinearPathBuilderFactory  = () => Series.PathBuilder;
 		export type SplinePathBuilderFactory  = () => Series.PathBuilder;
 		export type SteppedPathBuilderFactory = (opts?: SteppedPathBuilderOpts) => Series.PathBuilder;
@@ -660,6 +700,8 @@ declare namespace uPlot {
 		export interface Points {
 			/** if boolean or returns boolean, round points are drawn with defined options, else fn should draw own custom points via self.ctx */
 			show?: Points.Show;
+
+			paths?: Points.Paths;
 
 			/** may return an array of points indices to draw */
 			filter?: Points.Filter;
@@ -694,7 +736,7 @@ declare namespace uPlot {
 
 		export type ClipPathBuilder = (gaps: Gaps, ori: Orientation, left: number, top: number, width: number, height: number) => Path2D | null;
 
-		export type PathBuilder = (self: uPlot, seriesIdx: number, idx0: number, idx1: number) => Paths | null;
+		export type PathBuilder = (self: uPlot, seriesIdx: number, idx0: number, idx1: number, filtIdxs?: number[] | null) => Paths | null;
 
 		export type MinMaxIdxs = [minIdx: number, maxIdx: number];
 
@@ -884,8 +926,11 @@ declare namespace uPlot {
 		/** axis label text */
 		label?: string;
 
-		/** height of x axis label or width of y axis label in CSS pixels */
+		/** height of x axis label or width of y axis label in CSS pixels alloted for label text + labelGap */
 		labelSize?: number;
+
+		/** gap between label baseline and tick values in CSS pixels */
+		labelGap?: number;
 
 		/** font used for axis label */
 		labelFont?: CanvasRenderingContext2D['font'];

@@ -15,8 +15,8 @@ mysqli_set_charset($link, "utf8");
 	// initialize variables
 	$update = true;
 
-	if (isset($_POST['update'])) {
-		$name = $_POST['name'];
+	if (isset($_REQUEST['name'])) {
+		$name = $_REQUEST['name'];
 $query = mysqli_query($link, "SELECT * from nas ");
        while($row = $query->fetch_array()){
 

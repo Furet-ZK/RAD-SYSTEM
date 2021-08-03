@@ -7,7 +7,7 @@ session_start();
 	if ($_SESSION['AUTH_MANAGER'] == '') {
 header("Location: index.php");
     }
-    else {	
+    else {
 
 if (isset($_POST['update'])) {
 		$name = $_POST['name'];
@@ -39,7 +39,8 @@ echo '<div class"card">
             echo '<td><center><a><strong> ' . $row['srcip'] . '</strong> </a></center></td>';
             echo '<td><center><a><strong> ' . $row['dstip'] . '</strong> <br></a></center></td>';
 
-		}}
+		}
+echo '</table></div></div></div></div></div>';}
 else {
 		$res= mysqli_query($conn, "SELECT * FROM `$da` where username= '$name' and `dstip` LIKE '%$dstip%' and `srcip` LIKE '%$srcip%' and `time` LIKE '%$time%' ");
 
@@ -64,5 +65,6 @@ echo '<div class"card">
             echo '<td><center><a><strong> ' . $row['srcip'] . '</strong> </a></center></td>';
             echo '<td><center><a><strong> ' . $row['dstip'] . '</strong> <br></a></center></td>';
 
-		}}}}
+		}
+echo'</table></div></div></div></div></div>';}}}
 ?>

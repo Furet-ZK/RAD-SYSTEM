@@ -137,3 +137,4 @@
 {AAAA133}]	The Service ADD Successfully
 {AAAA134}]	Options
 {AAAA135}]	System Settings
+{AAAA136}]	Last Login Off

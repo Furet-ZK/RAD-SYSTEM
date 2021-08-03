@@ -1,3 +1,5 @@
+<html>
+<body>
 <?php
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 header('Cache-Control: no-store, no-cache, must-revalidate');
@@ -53,7 +55,6 @@ echo '</select>
 <div class="form-group col-md-12">
 		<button class="btn bg-gradient-warning" type="submit" name="insert"><h3 style="font-size: 24px;">ADD IP</h3></button>
 	</div>';
-
 
 	if (isset($_POST['update'])) {
 		$static = $_POST['static'];

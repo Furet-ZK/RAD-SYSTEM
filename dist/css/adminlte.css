@@ -13239,7 +13239,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   white-space: normal;
 }
 
-.sidebar-is-opening .nav-sidebar .nav-link p {
+.sidebar-is-opening .sidebar .nav-sidebar .nav-link p {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
   -webkit-animation-duration: 0.3s;
@@ -13787,27 +13787,27 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   margin-left: 2.05rem;
 }
 
-.sidebar-collapse .nav-flat.nav-child-indent .nav-treeview .nav-icon {
+.sidebar-collapse .nav-flat.nav-child-indent .sidebar .nav-treeview .nav-icon {
   margin-left: .55rem;
 }
 
-.sidebar-collapse .nav-flat.nav-child-indent .nav-treeview .nav-link {
+.sidebar-collapse .nav-flat.nav-child-indent .sidebar .nav-treeview .nav-link {
   padding-left: calc(1rem - .2rem);
 }
 
-.sidebar-collapse .nav-flat.nav-child-indent .nav-treeview .nav-treeview .nav-icon {
+.sidebar-collapse .nav-flat.nav-child-indent .sidebar .nav-treeview .nav-treeview .nav-icon {
   margin-left: .35rem;
 }
 
-.sidebar-collapse .nav-flat.nav-child-indent .nav-treeview .nav-treeview .nav-treeview .nav-icon {
+.sidebar-collapse .nav-flat.nav-child-indent .sidebar .nav-treeview .nav-treeview .nav-treeview .nav-icon {
   margin-left: .15rem;
 }
 
-.sidebar-collapse .nav-flat.nav-child-indent .nav-treeview .nav-treeview .nav-treeview .nav-treeview .nav-icon {
+.sidebar-collapse .nav-flat.nav-child-indent .sidebar .nav-treeview .nav-treeview .nav-treeview .nav-treeview .nav-icon {
   margin-left: -.15rem;
 }
 
-.sidebar-collapse .nav-flat.nav-child-indent .nav-treeview .nav-treeview .nav-treeview .nav-treeview .nav-treeview .nav-icon {
+.sidebar-collapse .nav-flat.nav-child-indent .sidebar .nav-treeview .nav-treeview .nav-treeview .nav-treeview .nav-treeview .nav-icon {
   margin-left: -.35rem;
 }
 
@@ -13939,72 +13939,80 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   }
 }
 
-.sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused .nav-legacy.nav-child-indent .nav-treeview,
-.sidebar-mini.sidebar-collapse .main-sidebar:hover .nav-legacy.nav-child-indent .nav-treeview,
-.sidebar-mini-md.sidebar-collapse .main-sidebar.sidebar-focused .nav-legacy.nav-child-indent .nav-treeview,
-.sidebar-mini-md.sidebar-collapse .main-sidebar:hover .nav-legacy.nav-child-indent .nav-treeview,
-.sidebar-mini-xs.sidebar-collapse .main-sidebar.sidebar-focused .nav-legacy.nav-child-indent .nav-treeview,
-.sidebar-mini-xs.sidebar-collapse .main-sidebar:hover .nav-legacy.nav-child-indent .nav-treeview {
+.main-sidebar.sidebar-focused .nav-legacy .sidebar-mini.sidebar-collapse.nav-child-indent .nav-treeview,
+.main-sidebar:hover .nav-legacy .sidebar-mini.sidebar-collapse.nav-child-indent .nav-treeview, .main-sidebar.sidebar-focused
+.nav-legacy .sidebar-mini-md.sidebar-collapse.nav-child-indent .nav-treeview,
+.main-sidebar:hover
+.nav-legacy .sidebar-mini-md.sidebar-collapse.nav-child-indent .nav-treeview, .main-sidebar.sidebar-focused
+.nav-legacy .sidebar-mini-xs.sidebar-collapse.nav-child-indent .nav-treeview,
+.main-sidebar:hover
+.nav-legacy .sidebar-mini-xs.sidebar-collapse.nav-child-indent .nav-treeview {
   padding-left: 1rem;
 }
 
-.sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused .nav-legacy.nav-child-indent .nav-treeview .nav-treeview,
-.sidebar-mini.sidebar-collapse .main-sidebar:hover .nav-legacy.nav-child-indent .nav-treeview .nav-treeview,
-.sidebar-mini-md.sidebar-collapse .main-sidebar.sidebar-focused .nav-legacy.nav-child-indent .nav-treeview .nav-treeview,
-.sidebar-mini-md.sidebar-collapse .main-sidebar:hover .nav-legacy.nav-child-indent .nav-treeview .nav-treeview,
-.sidebar-mini-xs.sidebar-collapse .main-sidebar.sidebar-focused .nav-legacy.nav-child-indent .nav-treeview .nav-treeview,
-.sidebar-mini-xs.sidebar-collapse .main-sidebar:hover .nav-legacy.nav-child-indent .nav-treeview .nav-treeview {
+.main-sidebar.sidebar-focused .nav-legacy .sidebar-mini.sidebar-collapse.nav-child-indent .nav-treeview .nav-treeview,
+.main-sidebar:hover .nav-legacy .sidebar-mini.sidebar-collapse.nav-child-indent .nav-treeview .nav-treeview, .main-sidebar.sidebar-focused
+.nav-legacy .sidebar-mini-md.sidebar-collapse.nav-child-indent .nav-treeview .nav-treeview,
+.main-sidebar:hover
+.nav-legacy .sidebar-mini-md.sidebar-collapse.nav-child-indent .nav-treeview .nav-treeview, .main-sidebar.sidebar-focused
+.nav-legacy .sidebar-mini-xs.sidebar-collapse.nav-child-indent .nav-treeview .nav-treeview,
+.main-sidebar:hover
+.nav-legacy .sidebar-mini-xs.sidebar-collapse.nav-child-indent .nav-treeview .nav-treeview {
   padding-left: 2rem;
   margin-left: -1rem;
 }
 
-.sidebar-mini.sidebar-collapse.text-sm .main-sidebar.sidebar-focused .nav-legacy.nav-child-indent .nav-treeview,
-.sidebar-mini.sidebar-collapse.text-sm .main-sidebar:hover .nav-legacy.nav-child-indent .nav-treeview,
-.sidebar-mini-md.sidebar-collapse.text-sm .main-sidebar.sidebar-focused .nav-legacy.nav-child-indent .nav-treeview,
-.sidebar-mini-md.sidebar-collapse.text-sm .main-sidebar:hover .nav-legacy.nav-child-indent .nav-treeview,
-.sidebar-mini-xs.sidebar-collapse.text-sm .main-sidebar.sidebar-focused .nav-legacy.nav-child-indent .nav-treeview,
-.sidebar-mini-xs.sidebar-collapse.text-sm .main-sidebar:hover .nav-legacy.nav-child-indent .nav-treeview {
+.main-sidebar.sidebar-focused .nav-legacy .sidebar-mini.sidebar-collapse.text-sm.nav-child-indent .nav-treeview,
+.main-sidebar:hover .nav-legacy .sidebar-mini.sidebar-collapse.text-sm.nav-child-indent .nav-treeview, .main-sidebar.sidebar-focused
+.nav-legacy .sidebar-mini-md.sidebar-collapse.text-sm.nav-child-indent .nav-treeview,
+.main-sidebar:hover
+.nav-legacy .sidebar-mini-md.sidebar-collapse.text-sm.nav-child-indent .nav-treeview, .main-sidebar.sidebar-focused
+.nav-legacy .sidebar-mini-xs.sidebar-collapse.text-sm.nav-child-indent .nav-treeview,
+.main-sidebar:hover
+.nav-legacy .sidebar-mini-xs.sidebar-collapse.text-sm.nav-child-indent .nav-treeview {
   padding-left: .5rem;
 }
 
-.sidebar-mini.sidebar-collapse.text-sm .main-sidebar.sidebar-focused .nav-legacy.nav-child-indent .nav-treeview .nav-treeview,
-.sidebar-mini.sidebar-collapse.text-sm .main-sidebar:hover .nav-legacy.nav-child-indent .nav-treeview .nav-treeview,
-.sidebar-mini-md.sidebar-collapse.text-sm .main-sidebar.sidebar-focused .nav-legacy.nav-child-indent .nav-treeview .nav-treeview,
-.sidebar-mini-md.sidebar-collapse.text-sm .main-sidebar:hover .nav-legacy.nav-child-indent .nav-treeview .nav-treeview,
-.sidebar-mini-xs.sidebar-collapse.text-sm .main-sidebar.sidebar-focused .nav-legacy.nav-child-indent .nav-treeview .nav-treeview,
-.sidebar-mini-xs.sidebar-collapse.text-sm .main-sidebar:hover .nav-legacy.nav-child-indent .nav-treeview .nav-treeview {
+.main-sidebar.sidebar-focused .nav-legacy .sidebar-mini.sidebar-collapse.text-sm.nav-child-indent .nav-treeview .nav-treeview,
+.main-sidebar:hover .nav-legacy .sidebar-mini.sidebar-collapse.text-sm.nav-child-indent .nav-treeview .nav-treeview, .main-sidebar.sidebar-focused
+.nav-legacy .sidebar-mini-md.sidebar-collapse.text-sm.nav-child-indent .nav-treeview .nav-treeview,
+.main-sidebar:hover
+.nav-legacy .sidebar-mini-md.sidebar-collapse.text-sm.nav-child-indent .nav-treeview .nav-treeview, .main-sidebar.sidebar-focused
+.nav-legacy .sidebar-mini-xs.sidebar-collapse.text-sm.nav-child-indent .nav-treeview .nav-treeview,
+.main-sidebar:hover
+.nav-legacy .sidebar-mini-xs.sidebar-collapse.text-sm.nav-child-indent .nav-treeview .nav-treeview {
   padding-left: 1rem;
   margin-left: -.5rem;
 }
 
-.sidebar-mini.sidebar-collapse .nav-legacy > .nav-item > .nav-link .nav-icon,
-.sidebar-mini-md.sidebar-collapse .nav-legacy > .nav-item > .nav-link .nav-icon,
-.sidebar-mini-xs.sidebar-collapse .nav-legacy > .nav-item > .nav-link .nav-icon {
+.sidebar-mini.sidebar-collapse .nav-legacy .sidebar > .nav-item > .nav-link .nav-icon,
+.sidebar-mini-md.sidebar-collapse .nav-legacy .sidebar > .nav-item > .nav-link .nav-icon,
+.sidebar-mini-xs.sidebar-collapse .nav-legacy .sidebar > .nav-item > .nav-link .nav-icon {
   margin-left: .55rem;
 }
 
-.sidebar-mini.sidebar-collapse .nav-legacy > .nav-item > .nav-link.active > .nav-icon,
-.sidebar-mini-md.sidebar-collapse .nav-legacy > .nav-item > .nav-link.active > .nav-icon,
-.sidebar-mini-xs.sidebar-collapse .nav-legacy > .nav-item > .nav-link.active > .nav-icon {
+.sidebar-mini.sidebar-collapse .nav-legacy .sidebar > .nav-item > .nav-link.active > .nav-icon,
+.sidebar-mini-md.sidebar-collapse .nav-legacy .sidebar > .nav-item > .nav-link.active > .nav-icon,
+.sidebar-mini-xs.sidebar-collapse .nav-legacy .sidebar > .nav-item > .nav-link.active > .nav-icon {
   margin-left: .36rem;
 }
 
-.sidebar-mini.sidebar-collapse .nav-legacy.nav-child-indent .nav-treeview .nav-treeview,
-.sidebar-mini-md.sidebar-collapse .nav-legacy.nav-child-indent .nav-treeview .nav-treeview,
-.sidebar-mini-xs.sidebar-collapse .nav-legacy.nav-child-indent .nav-treeview .nav-treeview {
+.sidebar-mini.sidebar-collapse .nav-legacy .sidebar.nav-child-indent .nav-treeview .nav-treeview,
+.sidebar-mini-md.sidebar-collapse .nav-legacy .sidebar.nav-child-indent .nav-treeview .nav-treeview,
+.sidebar-mini-xs.sidebar-collapse .nav-legacy .sidebar.nav-child-indent .nav-treeview .nav-treeview {
   padding-left: 0;
   margin-left: 0;
 }
 
-.sidebar-mini.sidebar-collapse.text-sm .nav-legacy > .nav-item > .nav-link .nav-icon,
-.sidebar-mini-md.sidebar-collapse.text-sm .nav-legacy > .nav-item > .nav-link .nav-icon,
-.sidebar-mini-xs.sidebar-collapse.text-sm .nav-legacy > .nav-item > .nav-link .nav-icon {
+.sidebar-mini.sidebar-collapse.text-sm .nav-legacy .sidebar > .nav-item > .nav-link .nav-icon,
+.sidebar-mini-md.sidebar-collapse.text-sm .nav-legacy .sidebar > .nav-item > .nav-link .nav-icon,
+.sidebar-mini-xs.sidebar-collapse.text-sm .nav-legacy .sidebar > .nav-item > .nav-link .nav-icon {
   margin-left: .75rem;
 }
 
-.sidebar-mini.sidebar-collapse.text-sm .nav-legacy > .nav-item > .nav-link.active > .nav-icon,
-.sidebar-mini-md.sidebar-collapse.text-sm .nav-legacy > .nav-item > .nav-link.active > .nav-icon,
-.sidebar-mini-xs.sidebar-collapse.text-sm .nav-legacy > .nav-item > .nav-link.active > .nav-icon {
+.sidebar-mini.sidebar-collapse.text-sm .nav-legacy .sidebar > .nav-item > .nav-link.active > .nav-icon,
+.sidebar-mini-md.sidebar-collapse.text-sm .nav-legacy .sidebar > .nav-item > .nav-link.active > .nav-icon,
+.sidebar-mini-xs.sidebar-collapse.text-sm .nav-legacy .sidebar > .nav-item > .nav-link.active > .nav-icon {
   margin-left: calc(.75rem - 3px);
 }
 
@@ -14048,7 +14056,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   animation-fill-mode: both;
 }
 
-.sidebar-collapse .nav-collapse-hide-child .menu-open > .nav-treeview {
+.sidebar-collapse .sidebar .nav-collapse-hide-child .menu-open > .nav-treeview {
   max-height: 0;
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
@@ -14058,12 +14066,14 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   animation-fill-mode: both;
 }
 
-.sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused .nav-collapse-hide-child .menu-open > .nav-treeview,
-.sidebar-mini.sidebar-collapse .main-sidebar:not(.sidebar-no-expand):hover .nav-collapse-hide-child .menu-open > .nav-treeview,
-.sidebar-mini-md.sidebar-collapse .main-sidebar.sidebar-focused .nav-collapse-hide-child .menu-open > .nav-treeview,
-.sidebar-mini-md.sidebar-collapse .main-sidebar:not(.sidebar-no-expand):hover .nav-collapse-hide-child .menu-open > .nav-treeview,
-.sidebar-mini-xs.sidebar-collapse .main-sidebar.sidebar-focused .nav-collapse-hide-child .menu-open > .nav-treeview,
-.sidebar-mini-xs.sidebar-collapse .main-sidebar:not(.sidebar-no-expand):hover .nav-collapse-hide-child .menu-open > .nav-treeview {
+.main-sidebar.sidebar-focused .nav-collapse-hide-child .sidebar-mini.sidebar-collapse .menu-open > .nav-treeview,
+.main-sidebar:not(.sidebar-no-expand):hover .nav-collapse-hide-child .sidebar-mini.sidebar-collapse .menu-open > .nav-treeview, .main-sidebar.sidebar-focused
+.nav-collapse-hide-child .sidebar-mini-md.sidebar-collapse .menu-open > .nav-treeview,
+.main-sidebar:not(.sidebar-no-expand):hover
+.nav-collapse-hide-child .sidebar-mini-md.sidebar-collapse .menu-open > .nav-treeview, .main-sidebar.sidebar-focused
+.nav-collapse-hide-child .sidebar-mini-xs.sidebar-collapse .menu-open > .nav-treeview,
+.main-sidebar:not(.sidebar-no-expand):hover
+.nav-collapse-hide-child .sidebar-mini-xs.sidebar-collapse .menu-open > .nav-treeview {
   max-height: -webkit-min-content;
   max-height: -moz-min-content;
   max-height: min-content;
@@ -14288,7 +14298,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 .layout-fixed .main-sidebar-custom {
   height: -webkit-fill-available;
   height: -moz-available;
-  height: fill-available;
+  height: stretch;
 }
 
 .layout-fixed .main-sidebar-custom .sidebar {
@@ -14678,12 +14688,12 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   .sidebar-mini.sidebar-collapse .nav-sidebar .nav-header {
     display: none;
   }
-  .sidebar-mini.sidebar-collapse .nav-sidebar .nav-link p {
+  .sidebar-mini.sidebar-collapse .sidebar .nav-sidebar .nav-link p {
     width: 0;
     white-space: nowrap;
   }
   .sidebar-mini.sidebar-collapse .sidebar .user-panel > .info,
-  .sidebar-mini.sidebar-collapse .nav-sidebar .nav-link p,
+  .sidebar-mini.sidebar-collapse .sidebar .nav-sidebar .nav-link p,
   .sidebar-mini.sidebar-collapse .brand-text {
     margin-left: -10px;
     -webkit-animation-name: fadeOut;
@@ -14736,10 +14746,10 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     float: left;
   }
   .sidebar-mini.sidebar-collapse .main-sidebar:hover .user-panel > .info,
-  .sidebar-mini.sidebar-collapse .main-sidebar:hover .nav-sidebar .nav-link p,
+  .sidebar-mini.sidebar-collapse .main-sidebar:hover .sidebar .nav-sidebar .nav-link p,
   .sidebar-mini.sidebar-collapse .main-sidebar:hover .brand-text,
   .sidebar-mini.sidebar-collapse .main-sidebar:hover .logo-xl, .sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused .user-panel > .info,
-  .sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused .nav-sidebar .nav-link p,
+  .sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused .sidebar .nav-sidebar .nav-link p,
   .sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused .brand-text,
   .sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused .logo-xl {
     display: inline-block;
@@ -14808,12 +14818,12 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   .sidebar-mini-md.sidebar-collapse .nav-sidebar .nav-header {
     display: none;
   }
-  .sidebar-mini-md.sidebar-collapse .nav-sidebar .nav-link p {
+  .sidebar-mini-md.sidebar-collapse .sidebar .nav-sidebar .nav-link p {
     width: 0;
     white-space: nowrap;
   }
   .sidebar-mini-md.sidebar-collapse .sidebar .user-panel > .info,
-  .sidebar-mini-md.sidebar-collapse .nav-sidebar .nav-link p,
+  .sidebar-mini-md.sidebar-collapse .sidebar .nav-sidebar .nav-link p,
   .sidebar-mini-md.sidebar-collapse .brand-text {
     margin-left: -10px;
     -webkit-animation-name: fadeOut;
@@ -14866,10 +14876,10 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     float: left;
   }
   .sidebar-mini-md.sidebar-collapse .main-sidebar:hover .user-panel > .info,
-  .sidebar-mini-md.sidebar-collapse .main-sidebar:hover .nav-sidebar .nav-link p,
+  .sidebar-mini-md.sidebar-collapse .main-sidebar:hover .sidebar .nav-sidebar .nav-link p,
   .sidebar-mini-md.sidebar-collapse .main-sidebar:hover .brand-text,
   .sidebar-mini-md.sidebar-collapse .main-sidebar:hover .logo-xl, .sidebar-mini-md.sidebar-collapse .main-sidebar.sidebar-focused .user-panel > .info,
-  .sidebar-mini-md.sidebar-collapse .main-sidebar.sidebar-focused .nav-sidebar .nav-link p,
+  .sidebar-mini-md.sidebar-collapse .main-sidebar.sidebar-focused .sidebar .nav-sidebar .nav-link p,
   .sidebar-mini-md.sidebar-collapse .main-sidebar.sidebar-focused .brand-text,
   .sidebar-mini-md.sidebar-collapse .main-sidebar.sidebar-focused .logo-xl {
     display: inline-block;
@@ -14941,13 +14951,13 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   display: none;
 }
 
-.sidebar-mini-xs.sidebar-collapse .nav-sidebar .nav-link p {
+.sidebar-mini-xs.sidebar-collapse .sidebar .nav-sidebar .nav-link p {
   width: 0;
   white-space: nowrap;
 }
 
 .sidebar-mini-xs.sidebar-collapse .sidebar .user-panel > .info,
-.sidebar-mini-xs.sidebar-collapse .nav-sidebar .nav-link p,
+.sidebar-mini-xs.sidebar-collapse .sidebar .nav-sidebar .nav-link p,
 .sidebar-mini-xs.sidebar-collapse .brand-text {
   margin-left: -10px;
   -webkit-animation-name: fadeOut;
@@ -15010,10 +15020,10 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 }
 
 .sidebar-mini-xs.sidebar-collapse .main-sidebar:hover .user-panel > .info,
-.sidebar-mini-xs.sidebar-collapse .main-sidebar:hover .nav-sidebar .nav-link p,
+.sidebar-mini-xs.sidebar-collapse .main-sidebar:hover .sidebar .nav-sidebar .nav-link p,
 .sidebar-mini-xs.sidebar-collapse .main-sidebar:hover .brand-text,
 .sidebar-mini-xs.sidebar-collapse .main-sidebar:hover .logo-xl, .sidebar-mini-xs.sidebar-collapse .main-sidebar.sidebar-focused .user-panel > .info,
-.sidebar-mini-xs.sidebar-collapse .main-sidebar.sidebar-focused .nav-sidebar .nav-link p,
+.sidebar-mini-xs.sidebar-collapse .main-sidebar.sidebar-focused .sidebar .nav-sidebar .nav-link p,
 .sidebar-mini-xs.sidebar-collapse .main-sidebar.sidebar-focused .brand-text,
 .sidebar-mini-xs.sidebar-collapse .main-sidebar.sidebar-focused .logo-xl {
   display: inline-block;
@@ -15432,22 +15442,22 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   padding-left: 0;
 }
 
-.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar.sidebar-focused .brand-text,
-.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar.sidebar-focused .user-panel > .info,
-.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar.sidebar-focused .nav-sidebar .nav-link p,
-.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar:hover .brand-text,
-.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar:hover .user-panel > .info,
-.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar:hover .nav-sidebar .nav-link p, .sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar.sidebar-focused .brand-text,
-.sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar.sidebar-focused .user-panel > .info,
-.sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar.sidebar-focused .nav-sidebar .nav-link p,
-.sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar:hover .brand-text,
-.sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar:hover .user-panel > .info,
-.sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar:hover .nav-sidebar .nav-link p, .sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar.sidebar-focused .brand-text,
-.sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar.sidebar-focused .user-panel > .info,
-.sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar.sidebar-focused .nav-sidebar .nav-link p,
-.sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar:hover .brand-text,
-.sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar:hover .user-panel > .info,
-.sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar:hover .nav-sidebar .nav-link p {
+.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar.sidebar-focused .sidebar .brand-text,
+.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar.sidebar-focused .sidebar .user-panel > .info,
+.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar.sidebar-focused .sidebar .nav-sidebar .nav-link p,
+.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar:hover .sidebar .brand-text,
+.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar:hover .sidebar .user-panel > .info,
+.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar:hover .sidebar .nav-sidebar .nav-link p, .sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar.sidebar-focused .sidebar .brand-text,
+.sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar.sidebar-focused .sidebar .user-panel > .info,
+.sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar.sidebar-focused .sidebar .nav-sidebar .nav-link p,
+.sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar:hover .sidebar .brand-text,
+.sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar:hover .sidebar .user-panel > .info,
+.sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar:hover .sidebar .nav-sidebar .nav-link p, .sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar.sidebar-focused .sidebar .brand-text,
+.sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar.sidebar-focused .sidebar .user-panel > .info,
+.sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar.sidebar-focused .sidebar .nav-sidebar .nav-link p,
+.sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar:hover .sidebar .brand-text,
+.sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar:hover .sidebar .user-panel > .info,
+.sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar:hover .sidebar .nav-sidebar .nav-link p {
   margin-left: -10px;
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
@@ -15459,10 +15469,10 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   width: 0;
 }
 
-.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar.sidebar-focused .nav-sidebar > .nav-item .nav-icon,
-.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar:hover .nav-sidebar > .nav-item .nav-icon, .sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar.sidebar-focused .nav-sidebar > .nav-item .nav-icon,
-.sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar:hover .nav-sidebar > .nav-item .nav-icon, .sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar.sidebar-focused .nav-sidebar > .nav-item .nav-icon,
-.sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar:hover .nav-sidebar > .nav-item .nav-icon {
+.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar.sidebar-focused .sidebar .nav-sidebar > .nav-item .nav-icon,
+.sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar:hover .sidebar .nav-sidebar > .nav-item .nav-icon, .sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar.sidebar-focused .sidebar .nav-sidebar > .nav-item .nav-icon,
+.sidebar-collapse.sidebar-mini-md .sidebar-no-expand.main-sidebar:hover .sidebar .nav-sidebar > .nav-item .nav-icon, .sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar.sidebar-focused .sidebar .nav-sidebar > .nav-item .nav-icon,
+.sidebar-collapse.sidebar-mini-xs .sidebar-no-expand.main-sidebar:hover .sidebar .nav-sidebar > .nav-item .nav-icon {
   margin-right: 0;
 }
 
@@ -18840,6 +18850,21 @@ body.text-sm .control-sidebar {
   background-color: #3f474e;
   border-color: #495159 !important;
   color: #fff;
+}
+
+.navbar-nav-not-expanded {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.navbar-nav-not-expanded .dropdown-menu {
+  position: absolute;
+}
+
+.navbar-nav-not-expanded .nav-link {
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .dark-mode .nav-pills .nav-link {
@@ -29058,12 +29083,12 @@ body.text-sm .input-group-text {
   display: none;
 }
 
-.card .nav.flex-column > li {
+.card .nav.flex-column:not(.nav-sidebar) > li {
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   margin: 0;
 }
 
-.card .nav.flex-column > li:last-of-type {
+.card .nav.flex-column:not(.nav-sidebar) > li:last-of-type {
   border-bottom: 0;
 }
 
