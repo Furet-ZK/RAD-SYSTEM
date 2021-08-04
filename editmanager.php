@@ -25,7 +25,7 @@ echo '<div class"card">
 <div class="row">
 <div class="col-sm-12 col-md-12 lobipanel-parent-sortable ui-sortable">
 <div class="card card-bd lobidrag lobipanel lobipanel-sortable">
-<div class="card-body"><form method="post" action="" >
+<div class="card-body"><form method="post" action="" id="q">
 <!-----------<div style="overflow-x:auto;">/--------->
 <table class="table" border="15"><td>
 <center><h3><div class="form-row"><div class="form-group col-md-6">
@@ -106,3 +106,39 @@ echo "<BR>";
 echo "<script>window.location = 'index.php?cont=list_managers';</script>";
 }}}
 ?>
+<script>
+$(function () {
+  $('#q').validate({
+    rules: {
+      managername: {
+        required: true,
+        minlength: 1
+      },
+      password: {
+        required: true,
+        minlength: 1
+      },
+    },
+    messages: {
+      managername: {
+        required: "Manager Name is Reqiured",
+      },
+      password: {
+        required: "Manager Password is Reqiured",
+        minlength: "Your password must be at least 1 characters long"
+      },
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
+});
+</script>

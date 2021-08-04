@@ -12,14 +12,15 @@ header("Location: index.php");
 	// initialize variables
 	$update = true;
 
-if ($_REQUEST['name'] == '') {
-	$_REQUEST['name'] = '';
+if ($user < 1 || $_REQUEST['name'] == ''){
+header("Location: index.php?cont=list_users");
 }
+
 echo '<div class"card">
 <div class="row">
 <div class="col-sm-12 col-md-12 lobipanel-parent-sortable ui-sortable">
 <div class="card card-bd lobidrag lobipanel lobipanel-sortable">
-<div class="card-body"><form method="post" action="" ><div style="overflow-x:auto;">
+<div class="card-body"><div style="overflow-x:auto;"><form method="post" action="" id="q">
 <table class="table" border="15">
 
 <td><center><h3><div class="md-form mt-0">
@@ -51,7 +52,7 @@ echo '</select>
 		<?php if ($update == true): ?>
 		<br><center><button class="btn" type="submit" name="update" style="background: orange;" ><h3 >Change</h3></button></center>
 		<?php endif ?>
-	</div><br><center><a class="btn btn-block btn-dark"><h4>عند تغير نوع الاشتراك سيتغير تاريخ انتهاء الاشتراك الى الوقت الحالي ويعني انتهاء المشترك</h4></a></center></table></div></div></div></div></div></div>';
+	</div><br><center><a class="btn btn-block btn-dark"><h4>عند تغير نوع الاشتراك سيتغير تاريخ انتهاء الاشتراك الى الوقت الحالي ويعني انتهاء المشترك</h4></a></center>';
 
 	if (isset($_POST['update'])) {
 		$name = $_POST['name'];
@@ -97,5 +98,47 @@ else {
 echo "<BR>";
  echo "<script>window.location = 'index.php?cont=list_users';</script>";}
 }
-echo '</table></div>';}
+echo '</table></div></div></div></div></div></div>';}
 ?>
+<script>
+$(function () {
+  $('#q').validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 1
+      },
+      srvid: {
+        required: true,
+        minlength: 1
+      },
+      srvid1: {
+        required: true,
+        minlength: 1
+      },
+    },
+    messages: {
+      name: {
+        required: "Username Is Reqiured",
+      },
+      srvid: {
+        required: "OLD Service Is Reqiured",
+      },
+      srvid1: {
+        required: "New Service Is Reqiured",
+      },
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
+});
+</script>

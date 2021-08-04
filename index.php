@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
-<body class="hold-transition layout-fixed sidebar-collapse sidebar-mini">
+<body class="hold-transition layout-fixed layout-footer-fixed sidebar-collapse sidebar-mini">
 
 <?php 
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');

@@ -138,3 +138,7 @@
 {AAAA134}]	Options
 {AAAA135}]	System Settings
 {AAAA136}]	Last Login Off
+{AAAA137}]	Please enter a username
+{AAAA138}]	Please provide a password
+{AAAA139}]	Please enter a Managername
+{AAAA140}]	System

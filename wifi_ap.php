@@ -31,7 +31,7 @@ echo '<div class"card">
 }
 if ($_REQUEST['val'] == '1') {
 if ($_REQUEST['ip'] == ''){
-$_REQUEST['ip'];}
+header("Location: index.php?cont=wifi_ap");}
 $ip = $_REQUEST['ip'];
 
        $query = mysqli_query($link, "SELECT * FROM rm_ap where ip = '$ip' ");
@@ -40,25 +40,25 @@ echo '<div class"card">
 <div class="row">
 <div class="col-sm-12 col-md-12 lobipanel-parent-sortable ui-sortable">
 <div class="card card-bd lobidrag lobipanel lobipanel-sortable">
-<div class="card-body"><div style="overflow-x:auto;"><form method="post" action="" >
-<center><table class="table bg-primary" border="15">
+<div class="card-body"><div style="overflow-x:auto;"><form method="post" action="" id="q">
+<center><table class="table" border="15">
 <td><center><h3><div class="form-row"><div class="form-group col-md-12">
-		<center><label><h3><center><a style="color:white">Wifi Name</a></center></h3></label></center>
+		<center><label><h3><center><a>Wifi Name</a></center></h3></label></center>
 		<center><input style="text-align:center;" class="form-control" name="name" value="' . $row['name'] . '"></center>
 	</div>
 <div class="form-group col-md-6">
-		<center><label><h3><center><a style="color:white">Wifi ip</a></center></h3></label></center>
+		<center><label><h3><center><a>Wifi ip</a></center></h3></label></center>
 		<center><input style="text-align:center;" class="form-control" name="ip2" value="' . $row['ip'] . '"></center>
 	</div>
 <div class="form-group col-md-6">
-		<center><label><h3><center><a style="color:white">Community</a></center></h3></label></center>
+		<center><label><h3><center><a>Community</a></center></h3></label></center>
 		<center><input style="text-align:center;" class="form-control" name="community" value="' . $row['community'] . '" ></center>
 	</div>
 <div class="form-group col-md-12">
 		<?php if ($update == true): ?>
 		<center><button class="btn bg-gradient-warning" type="submit" name="update"><h3 style="font-size: 24px;">Change</h3></button></center>
 		<?php endif ?>
-	</div></div></table></center>';
+	</div></table></center></div></div></div></div></div></div>';
 
 	if (isset($_POST['update'])) {
 		$name = $_POST['name'];

@@ -9,6 +9,10 @@ header("Location: index.php");
     }
     else {
 
+if ($user < 1 || $_REQUEST['name'] == ''){
+header("Location: index.php?cont=list_users");
+}
+
 	// initialize variables
 	$update = true;
 

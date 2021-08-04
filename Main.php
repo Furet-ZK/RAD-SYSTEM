@@ -220,6 +220,43 @@ if ($_SESSION['AUTH_MANAGER'] == 'admin'){
               </li>
 </ul>
 </li>
+
+<li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                {AAAA140}
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+<ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="index.php?cont=system_settings" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{AAAA135}</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.php?cont=system_restart" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{AAAA79}</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.php?cont=nas" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{AAAA78}</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.php?cont=options" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{AAAA134}</p>
+                </a>
+              </li>
+</ul>
+</li>
+
 	              <li class="nav-item">  
             <a href="index.php?cont=ip_setting" class="nav-link">
               <i class="nav-icon fas fa-sign-out-alt"></i>
@@ -253,41 +290,10 @@ if ($_SESSION['AUTH_MANAGER'] == 'admin'){
             </a></li>
 
 <li class="nav-item">  
-            <a href="index.php?cont=nas" class="nav-link">
-              <i class="nav-icon fas fa-sign-out-alt"></i>
-              <p>
-                {AAAA78}
-              </p>
-            </a></li>
-<li class="nav-item">  
-            <a href="index.php?cont=system_restart" class="nav-link">
-              <i class="nav-icon fas fa-sign-out-alt"></i>
-              <p>
-                {AAAA79}
-              </p>
-            </a></li>
-
-<li class="nav-item">  
-            <a href="index.php?cont=system_settings" class="nav-link">
-              <i class="nav-icon fas fa-sign-out-alt"></i>
-              <p>
-                {AAAA135}
-              </p>
-            </a></li>
-
-<li class="nav-item">  
             <a href="index.php?cont=search_con" class="nav-link">
               <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
                 {AAAA80}
-              </p>
-            </a></li>
-
-<li class="nav-item">  
-            <a href="index.php?cont=options" class="nav-link">
-              <i class="nav-icon fas fa-sign-out-alt"></i>
-              <p>
-                {AAAA134}
               </p>
             </a></li>';}
 	              echo '<li class="nav-item">  

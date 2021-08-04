@@ -8,6 +8,11 @@ session_start();
 header("Location: index.php");
     }
     else {
+
+$n= mysqli_query($link, "select count(*) as num from rm_users where username = '" . $_REQUEST['name'] . "' ");
+    while ($row3 = $n->fetch_array()){
+$user = $row3['num'];}
+
 if ($_SESSION['AUTH_MANAGER'] == "admin") {
 $result = mysqli_query($link, "SELECT * FROM radacct LEFT JOIN rm_users ON rm_users.username = radacct.username AND AcctStopTime IS NULL LEFT JOIN rm_allowedmanagers ON rm_allowedmanagers.srvid = rm_users.srvid  WHERE  rm_allowedmanagers.managername = '" . $_SESSION['AUTH_MANAGER'] . "' ");
 $num_rows = mysqli_num_rows($result);

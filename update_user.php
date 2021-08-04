@@ -12,15 +12,15 @@ header("Location: index.php");
 	// initialize variables
 	$update = true;
 
-if ($_REQUEST['name'] == '') {
-	$_REQUEST['name'] = '';
+if ($user < 1 || $_REQUEST['name'] == ''){
+header("Location: index.php?cont=list_users");
 }
 
 echo '<div class"card">
 <div class="row">
 <div class="col-sm-12 col-md-12 lobipanel-parent-sortable ui-sortable">
 <div class="card card-bd lobidrag lobipanel lobipanel-sortable">
-<div class="card-body"><form method="post" action="" ><div style="overflow-x:auto;">
+<div class="card-body"><div style="overflow-x:auto;"><form method="post" action="" id="q">
 <table class="table" border="15">
 <td><center><h3><div class="md-form mt-0">
 		<center><label><center><a>اسم المستخدم الحالي</a></center></label></center>
@@ -35,7 +35,7 @@ echo '<div class"card">
 		<?php if ($update == true): ?>
 		<br><center><button class="btn" type="submit" name="update" style="background: orange;" ><h3 style="font-size: 24px;">Change</h3></button></center>
 		<?php endif ?>
-	</div></table></div></div></div></div></div></div>';
+	</div>';
 	if (isset($_POST['update'])) {
 		$name = $_POST['name'];
 		$rename = $_POST['rename'];
@@ -81,5 +81,41 @@ echo "ERROR";
 }}}
 echo "<BR>";
 echo '<a class="btn bg-gradient-danger btn-lg" href=""><h1 style="font-size: 24px;">اسم المستخدم الجديد غير متاح</h1></a>';}
-echo '</table></div>';}
+echo '</table></div></div></div></div></div></div>';}
 ?>
+<script>
+$(function () {
+  $('#q').validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 1
+      },
+      rename: {
+        required: true,
+        minlength: 1
+      },
+    },
+    messages: {
+      name: {
+        required: "OLD Username Is Reqiured",
+      },
+      rename: {
+        required: "New Username Is Reqiured",
+        minlength: "Your username must be at least 1 characters long",
+      },
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
+});
+</script>
