@@ -22,11 +22,6 @@
  */
 
 /*
-// REMOVE THIS BLOCK - used for DataTables test environment only!
-$file = $_SERVER['DOCUMENT_ROOT'].'/datatables/pdo.php';
-if ( is_file( $file ) ) {
-    include( $file );
-}
 */
 
 class SSP {
@@ -179,7 +174,7 @@ class SSP {
                 
                 if ( $requestColumn['searchable'] == 'true' ) {
                     $binding = self::bind( $bindings, '%'.$str.'%', PDO::PARAM_STR );
-                    $globalSearch[] = self::get_field($column['db'])." LIKE ".$binding;
+                    $globalSearch[] = "CONVERT(".$column['db']." USING utf8) LIKE ".$binding;
                 }
             }
         }
@@ -196,7 +191,7 @@ class SSP {
                 if ( $requestColumn['searchable'] == 'true' &&
                     $str != '' ) {
                         $binding = self::bind( $bindings, '%'.$str.'%', PDO::PARAM_STR );
-                        $columnSearch[] = self::get_field($column['db'])." LIKE ".$binding;
+                        $columnSearch[] = "CONVERT(".$column['db']." USING utf8) LIKE ".$binding;
                     }
             }
         }
@@ -488,7 +483,7 @@ class SSP {
                 $sql_details['pass'],
                 array( PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION )
             );
-$db->exec("set charset utf8");
+$db->exec("set names utf8");
         }
         catch (PDOException $e) {
             self::fatal(
